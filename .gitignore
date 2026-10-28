@@ -1,0 +1,20 @@
+.DS_Store
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.local/
+
+# University reference originals are local, read-only source material.
+references/
+
+# Downloaded data and generated output will have documented entry points.
+data/
+outputs/
+artifacts/
+spark-warehouse/
+derby.log
+metastore_db/

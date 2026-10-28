@@ -1,0 +1,148 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Section 4: provided tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": [
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_quality.py",
+        "-v"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Section 4: run quality pipeline",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": [
+        "--output-dir",
+        "${workspaceFolder}/outputs/${input:qualityRunName}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Task 1: sales analysis",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": [
+        "--task",
+        "1",
+        "--output-dir",
+        "${workspaceFolder}/outputs/${input:task1RunName}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Task 2: product analysis",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": [
+        "--task",
+        "2",
+        "--output-dir",
+        "${workspaceFolder}/outputs/${input:task2RunName}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Task 3: customer analysis",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": [
+        "--task",
+        "3",
+        "--output-dir",
+        "${workspaceFolder}/outputs/${input:task3RunName}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Task 4: employee analysis",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": [
+        "--task",
+        "4",
+        "--output-dir",
+        "${workspaceFolder}/outputs/${input:task4RunName}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Task 5: monthly bonus simulation",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": [
+        "--task",
+        "5",
+        "--output-dir",
+        "${workspaceFolder}/outputs/${input:task5RunName}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "qualityRunName",
+      "type": "promptString",
+      "description": "New output folder name, for example vscode_run_1. Use a new name for each run.",
+      "default": "vscode_run_1"
+    },
+    {
+      "id": "task1RunName",
+      "type": "promptString",
+      "description": "New output folder for Task 1, for example task1_run_1.",
+      "default": "task1_run_1"
+    },
+    {
+      "id": "task2RunName",
+      "type": "promptString",
+      "description": "New output folder for Task 2, for example task2_run_1.",
+      "default": "task2_run_1"
+    },
+    {
+      "id": "task3RunName",
+      "type": "promptString",
+      "description": "New output folder for Task 3, for example task3_run_1.",
+      "default": "task3_run_1"
+    },
+    {
+      "id": "task4RunName",
+      "type": "promptString",
+      "description": "New output folder for Task 4, for example task4_run_1.",
+      "default": "task4_run_1"
+    },
+    {
+      "id": "task5RunName",
+      "type": "promptString",
+      "description": "New output folder for Task 5, for example task5_run_1.",
+      "default": "task5_run_1"
+    }
+  ]
+}
